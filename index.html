@@ -8,18 +8,37 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
+      
+      screen.orientation.lock("landscape-secondary");
+      
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Test4.json", {onProgress: UnityProgress});
-        window.addEventListener("resize", onResize);
-        
-        function onResize() {
-            unityInstance.SendMessage("TemplateDebugText", "SetWidth", window.innerWidth);
-            unityInstance.SendMessage("TemplateDebugText", "SetHeight", window.innerHeight);
-            unityInstance.SendMessage("TemplateDebugText", "OnResize");
-        }
+      window.addEventListener("resize", onResize);
+
+      function onResize() {
+        unityInstance.SendMessage("TemplateDebugText", "SetWidth", window.innerWidth);
+        unityInstance.SendMessage("TemplateDebugText", "SetHeight", window.innerHeight);
+        unityInstance.SendMessage("TemplateDebugText", "OnResize");
+      }
     </script>
   </head>
+
   <body style="margin:0; overflow: hidden;">
     <div id="unityContainer"></div>
   </body>
+
+  <script>
+    setTimeout(function(){
+        $("#unityContainer").find("button").click();
+      }, 200);
+
+      //window.screen.lockOrientation('portrait');
+    if(window.innerWidth < window.innerHeight) {
+      document.getElementById("unityContainer").style.transform = "rotate(90deg)"; 
+    }
+
+    
+
+  </script>
 </html>
