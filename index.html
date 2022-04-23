@@ -11,8 +11,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
       
-      screen.orientation.lock("landscape-secondary");
-      
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Test4.json", {onProgress: UnityProgress});
       window.addEventListener("resize", onResize);
 
@@ -21,7 +19,12 @@
         unityInstance.SendMessage("TemplateDebugText", "SetHeight", window.innerHeight);
         unityInstance.SendMessage("TemplateDebugText", "OnResize");
       }
+      
     </script>
+
+<main class="app">Texto del elemento</main>
+<div class="mensaje"></div>
+
   </head>
 
   <body style="margin:0; overflow: hidden;">
@@ -34,9 +37,9 @@
       }, 200);
 
       //window.screen.lockOrientation('portrait');
-    if(window.innerWidth < window.innerHeight) {
+    /*if(window.innerWidth < window.innerHeight) {
       document.getElementById("unityContainer").style.transform = "rotate(90deg)"; 
-    }
+    }*/
 
     
 
