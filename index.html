@@ -21,27 +21,17 @@
       }
       
     </script>
-
-<main class="app">Texto del elemento</main>
-<div class="mensaje"></div>
-
+    
   </head>
 
   <body style="margin:0; overflow: hidden;">
-    <main class="app">Texto del elemento</main>
+    <div class="app" id="unityContainer"></div>
+    <div class="mensaje"></div>
   </body>
 
   <script>
     setTimeout(function(){
         $("#unityContainer").find("button").click();
       }, 200);
-
-      //window.screen.lockOrientation('portrait');
-    /*if(window.innerWidth < window.innerHeight) {
-      document.getElementById("unityContainer").style.transform = "rotate(90deg)"; 
-    }*/
-
-    
-
   </script>
 </html>
