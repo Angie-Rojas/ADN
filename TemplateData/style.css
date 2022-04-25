@@ -18,70 +18,14 @@
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-/* Agregaremos algo de estilo para visualizar el 
-   elemento sobre el que vamos a realizar la prueba */
+
 
 body {
     margin: 0;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
 }
 
-   .app {
-    background-color: black;
-    color: white;
-    font-size: 2rem;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  
-  /* Esta es la parte que nos interesa */
-  @media screen and (orientation: portrait) {
-    /* Cubre toda la pantalla del dispositivo */
-    .mensaje {
-        font-family:sans-serif;
-      position: fixed;
-      margin: auto;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      
-      /* Con esto ajustamos la posición del texto */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      /* Un color de fondo */
-      
-      background-color: #00a3fd;
-        color: white;
-      /* Debemos superponerlo */
-      z-index: 1000;
-    }
-      .circle {
-          background: #fff;
-          width: 60px;
-          height: 60px;
-          
-          position: fixed;
-          z-index: 1000;
-          
-          border-radius: 50px;
-          margin-top: 80vh;
-          
-      }
-      .mensaje img {
-          max-width: 60px;
-      }
-      
-      .mensaje .logo {
-          max-width: 75vw;
-      }
-      
+
     
 
     
